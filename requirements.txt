@@ -7,3 +7,4 @@ notebook
 flask
 gunicorn
 librosa
+soundfile
