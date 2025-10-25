@@ -95,7 +95,7 @@ def model():
   gs.fit(x_train,y_train)
   t2 = time.time()
   minutes,seconds = divmod(t2-t1,60)
-  print("Model Trained Successfully ✅")
+  print("✅ Model Trained Successfully")
   print(f"Time elapsed: {int(minutes)} Minute {seconds:.2f} Seconds")
   pipe_best = gs.best_estimator_
   return pipe_best
@@ -114,7 +114,7 @@ def evaluation(pipe):
 def dumping(pipe, feature_names):
   joblib.dump(pipe,"models/pipe.pkl")
   joblib.dump(feature_names,"models/feature_names.pkl")
-  print(".pkl files are dumped successfully ✅")
+  print("✅ .pkl files are dumped successfully")
 
 def main():
   pipe = model()
