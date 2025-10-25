@@ -1,4 +1,4 @@
-# UrbanEcho
+# 💥 UrbanEcho
 
 UrbanEcho is a web-based audio classification project that predicts urban sound types from `.wav` files. It is built with **Python, scikit-learn, and Flask**, and uses a **RandomizedSearchCV-tuned ML pipeline** trained on tabular audio features extracted from the UrbanSound8K dataset.
 
