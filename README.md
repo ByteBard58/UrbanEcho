@@ -132,6 +132,7 @@ python app.py
 - Model is trained on `tabular features`, not raw audio — deep learning could improve predictions significantly.
 - If `models/pipe.pkl` or `models/feature_names.pkl` are deleted, the app will retrain the model automatically (may take a few minutes).
 - Because of the lack of extra contributors and my lack of front-end expertise, I had to use AI tools (mostly LLM services like ChatGPT™, Grok™, Gemini™) in order to create a sophisticated front end for the web app. The `HTML` and `CSS` were written by those tools.
+- The `static/style.css` file is currently blank. I have used `<style/>` tag and inline method in HTML files to generate the style. It will be updated in future if needed.
 
 ## 📌 Author
 Sakib ( ByteBard58 )
@@ -141,8 +142,8 @@ Sakib ( ByteBard58 )
 📍 GitHub Profile: [ByteBard58](http://www.github.com/ByteBard58)
 
 ## 😃 Appreciation 
-Thank you for taking the time to review my work. I hope you enjoyed it and found it intriguing. It would mean a lot to me if you could star it on GitHub. 🌟
+Thank you for taking the time to review my work. I hope you enjoyed it and found it intriguing. It would mean a lot to me if you could star it on GitHub. 🌟 If you would like to contribute to this repository, please do so. It will be a great help!
 
 If you have any questions, suggestions, or anything else you’d like to discuss, please don’t hesitate to reach out. You can find my contact information on my [GitHub profile page](http://www.github.com/ByteBard58). I’m all ears! 😊
 
-Have a great day!
+**Have a great day!**
