@@ -6,6 +6,7 @@ import os
 import shutil
 import pandas as pd
 from werkzeug.utils import secure_filename
+from fit import main
 
 ## Flask configuration
 app = Flask(__name__)
@@ -13,17 +14,27 @@ app.secret_key = "urbanecho_secret_key"  # required for flash messages
 app.config["UPLOAD_FOLDER"] = "static/uploads"
 app.config["ALLOWED_EXTENSIONS"] = {"wav"}
 
-# Loading the pickle files
+# Loading the pickle files or training if missing
 MODEL_PATH = "models/pipe.pkl"
 FEATURES_PATH = "models/feature_names.pkl"
 
-try:
-    pipe = joblib.load(MODEL_PATH)
-    feature_names = joblib.load(FEATURES_PATH)
-    print("✅ Model and feature names loaded successfully.")
-except Exception as e:
-    print(f"❌ Failed to load model: {e}")
-    raise SystemExit("Cannot start app without valid model files.")
+def load_model():
+    """Load model and feature names. If missing, train model first."""
+    if not os.path.exists(MODEL_PATH) or not os.path.exists(FEATURES_PATH):
+        print("❌ Model files not found. Training model now...")
+        main()  # Calls fit.py's main function to generate pipe.pkl and feature_names.pkl
+        print("✅ Model training completed.")
+
+    try:
+        pipe_loaded = joblib.load(MODEL_PATH)
+        feature_names_loaded = joblib.load(FEATURES_PATH)
+        print("✅ Model and feature names loaded successfully.")
+        return pipe_loaded, feature_names_loaded
+    except Exception as e:
+        print(f"❌ Failed to load model after training: {e}")
+        raise SystemExit("Cannot start app without valid model files.")
+
+pipe, feature_names = load_model()
 
 # Reverse label mapping
 LABELS = {
