@@ -134,12 +134,16 @@ python app.py
 - Because of the lack of extra contributors and my lack of front-end expertise, I had to use AI tools (mostly LLM services like ChatGPT™, Grok™, Gemini™) in order to create a sophisticated front end for the web app. The `HTML` and `CSS` were written by those tools.
 - The `static/style.css` file is currently blank. I have used `<style/>` tag and inline method in HTML files to generate the style. It will be updated in future if needed.
 
+---
+
 ## 📌 Author
 Sakib ( ByteBard58 )
 
 > Student | Aspiring Computer Engineer | AI & ML Enthusiast
 
 📍 GitHub Profile: [ByteBard58](http://www.github.com/ByteBard58)
+
+---
 
 ## 😃 Appreciation 
 Thank you for taking the time to review my work. I hope you enjoyed it and found it intriguing. It would mean a lot to me if you could star it on GitHub. 🌟 If you would like to contribute to this repository, please do so. It will be a great help!
