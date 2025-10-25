@@ -28,3 +28,4 @@ instance/
 shit/
 *.db
 .vscode/
+*.pkl
