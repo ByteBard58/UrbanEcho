@@ -9,3 +9,5 @@ gunicorn
 librosa
 soundfile
 Werkzeug
+seaborn
+matplotlib
