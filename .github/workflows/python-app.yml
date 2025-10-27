@@ -36,4 +36,7 @@ jobs:
 
       - name: Run and test Flask app
         run: |
-          python app.py
+          nohup python app.py &
+          sleep 280
+          curl -I http://127.0.0.1:5000
+          pkill -f "python app.py"        
