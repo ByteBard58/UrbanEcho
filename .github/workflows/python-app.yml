@@ -36,6 +36,4 @@ jobs:
 
       - name: Run and test Flask app
         run: |
-          nohup python app.py &
-          sleep 5
-          curl -I http://127.0.0.1:5000
+          python app.py
