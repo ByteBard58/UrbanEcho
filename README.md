@@ -103,6 +103,28 @@ python app.py
 
 ---
 
+## 🐳 Run the app directly via Dockerhub Image
+This is my first project where I have implemented Docker containerization. I have created a [**Dockerhub repository**](https://hub.docker.com/r/bytebard101/urbanecho) where I have pushed the docker container. 
+
+The container is built on both ARM64 and AMD64 architectures, so that it can run on almost all major computers. You can run the app easily by using the Dockerhub Image. Here's how you can do it:
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) and sign-in
+  
+2. Open Terminal and run this:
+```bash
+docker pull bytebard101/urbanecho:latest
+docker run --rm -p 5000:5000 bytebard101/urbanecho:latest
+```
+3. If your machine does not have the `port 5000` free, you need to run in a different port. Try to run this:
+```bash
+docker run --rm -p 5001:5000 bytebard101/urbanecho:latest
+```
+> If you followed Step 2 and the command ran successfully, then **DO NOT** follow this step.
+4. The app will be live at localhost:5000. Open your browser and navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000/) (or [http://127.0.0.1:5001](http://127.0.0.1:5000/) if you followed Step 3).
+
+Check [Docker Documentation](https://docs.docker.com/) to learn more about Docker and it's commands.
+
+---
+
 ## 📊 Model Performance
 
 - **Algorithm**: RandomForest (RandomizedSearchCV tuned)  
