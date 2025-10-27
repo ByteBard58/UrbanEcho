@@ -90,7 +90,8 @@ def model():
     pipe,param_distributions=param_dict,n_iter=15,refit=True,n_jobs=-1,cv=7,
     random_state=82
   )
-  print("Starting Model Training")
+  print("Starting Model Training......")
+  print("It will take some time to train, so please wait")
   t1 = time.time()
   gs.fit(x_train,y_train)
   t2 = time.time()
