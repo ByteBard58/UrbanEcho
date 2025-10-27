@@ -1,0 +1,6 @@
+__pycache__/
+*.pkl
+*.ipynb
+.env
+.git
+.gitignore
