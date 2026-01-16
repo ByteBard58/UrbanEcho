@@ -1,5 +1,5 @@
 # Dockerfile (urbanecho)
-FROM python:3.11-slim
+FROM python:3.13-slim
 
 # Avoid interactive prompts
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -9,6 +9,15 @@ WORKDIR /app
 
 # copy constraints / requirements first for better caching
 COPY requirements.txt .
+
+# Install system dependencies
+# libgomp1 is REQUIRED for LightGBM.
+# build-essential ensures gcc is available if any package needs compilation.
+RUN apt-get update && apt-get install -y \
+    libgomp1 \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # copy app source
